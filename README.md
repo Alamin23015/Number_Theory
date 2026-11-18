@@ -27,3 +27,28 @@ IT:23025
 * **Special Numbers:**
   * **Mersenne Primes (`2^n - 1`) & Perfect Numbers** (`6, 28, 496, 8128`).
   * **Antiprimes:** Numbers with more divisors than any smaller positive integer; total divisors `d(n) = (a₁ + 1)(a₂ + 1)...(aₖ + 1)`
+ 
+  * positive (k) for which (a^k\equiv1\pmod n), when (\gcd(a,n)=1). A primitive root has order (\phi(n)).
+
+8. Lucas and Related Primality Tests
+The slides state a Lucas criterion based on the prime factors of (n-1), and mention the (n-1) test, Pepin's test, Proth's theorem, Lucas–Lehmer test and (n+1) tests. These advanced criteria are described in the notebook; not all are implemented.
+
+9. Mersenne Primes and Lucas–Lehmer Test
+A Mersenne number is (M_p=2^p-1). For prime (p>2), the Lucas–Lehmer sequence is:
+
+[ s_0=4,\qquad s_{i+1}=s_i^2-2. ]
+
+(M_p) is prime exactly when (s_{p-2}\equiv0\pmod{M_p}). The notebook implements this test for small prime exponents.
+
+10. Perfect Numbers
+A perfect number equals the sum of its positive proper divisors. The first examples are 6, 28, 496 and 8128. The notebook computes proper-divisor sums and checks these examples.
+
+11. Antiprimes / Highly Composite Numbers
+A highly composite number has more positive divisors than every smaller positive integer. If (n=\prod p_i^{a_i}), its divisor count is:
+
+[ d(n)=\prod_i(a_i+1). ]
+
+The notebook computes divisor counts and lists record-holders up to a chosen limit.
+
+12. Fundamental Theorem of Arithmetic and Applications
+Every integer greater than 1 has a unique prime factorization, up to the order of factors. The lecture connects prime numbers with number-theoretic functions, modular arithmetic, cryptography, rings and algebraic number theory.
